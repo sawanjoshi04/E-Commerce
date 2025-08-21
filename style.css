@@ -409,6 +409,35 @@ footer {
     font-size: 0.75rem;
   }
 }
+/* ===== Responsive Portfolio Images ===== */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .grid img {
+    max-height: 220px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .grid img {
+    max-height: 180px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .grid img {
+    max-height: 150px;
+  }
+}
+
+/* Extra Small Mobile (max-width: 375px) */
+@media (max-width: 375px) {
+  .grid img {
+    max-height: 130px;
+  }
+}
 /* Lightbox Modal */
 .lightbox-modal {
   display: none;
