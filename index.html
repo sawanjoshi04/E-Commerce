@@ -7,50 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Feedback Button -->
-<button id="feedback-btn">Feedback</button>
 
-<!-- Feedback Modal -->
-<div id="feedback-modal">
-  <div class="feedback-content">
-    <h3>Leave Your Feedback</h3>
-    <textarea id="feedback-text" placeholder="Write your feedback here..."></textarea>
-    <br>
-    <button id="submit-feedback">Submit</button>
-    <p class="thank-you" id="thank-you-msg">✅ Thank you for giving me feedback!</p>
-  </div>
-</div>
-
-<script>
-  const feedbackBtn = document.getElementById("feedback-btn");
-  const feedbackModal = document.getElementById("feedback-modal");
-  const submitFeedback = document.getElementById("submit-feedback");
-  const thankYouMsg = document.getElementById("thank-you-msg");
-
-  // Open modal
-  feedbackBtn.addEventListener("click", () => {
-    feedbackModal.style.display = "flex";
-  });
-
-  // Submit feedback
-  submitFeedback.addEventListener("click", () => {
-    thankYouMsg.style.display = "block"; // show thank you
-    document.getElementById("feedback-text").value = ""; // clear input
-
-    // hide modal after 2 sec
-    setTimeout(() => {
-      feedbackModal.style.display = "none";
-      thankYouMsg.style.display = "none";
-    }, 2000);
-  });
-
-  // Close modal when clicking outside
-  window.addEventListener("click", (e) => {
-    if (e.target === feedbackModal) {
-      feedbackModal.style.display = "none";
-    }
-  });
-</script>
 
 
   <!-- Navbar -->
@@ -306,7 +263,22 @@
       <p>Email: sawanjoshi04@gmail.com | Phone: +91 73028 44924</p>
     </div>
   </footer>
+    <!-- Feedback Button -->
+<button id="feedback-btn">Feedback</button>
 
+<!-- Feedback Modal -->
+<div id="feedback-modal">
+  <div class="feedback-content">
+    <h3>Leave Your Feedback</h3>
+    <textarea id="feedback-text" placeholder="Write your feedback here..."></textarea>
+    <br>
+    <button id="submit-feedback">Submit</button>
+    <p class="thank-you" id="thank-you-msg">✅ Thank you for giving me feedback!</p>
+  </div>
+</div>
+
+<script>
+</script>
   <script src="script.js"></script>
 </body>
 </html>
