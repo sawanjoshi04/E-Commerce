@@ -53,3 +53,32 @@ setInterval(nextSlide, 3000);
 
 // Optional: Show the first slide immediately
 showSlide(currentSlide);
+
+  const feedbackBtn = document.getElementById("feedback-btn");
+  const feedbackModal = document.getElementById("feedback-modal");
+  const submitFeedback = document.getElementById("submit-feedback");
+  const thankYouMsg = document.getElementById("thank-you-msg");
+
+  // Open modal
+  feedbackBtn.addEventListener("click", () => {
+    feedbackModal.style.display = "flex";
+  });
+
+  // Submit feedback
+  submitFeedback.addEventListener("click", () => {
+    thankYouMsg.style.display = "block"; // show thank you
+    document.getElementById("feedback-text").value = ""; // clear input
+
+    // hide modal after 2 sec
+    setTimeout(() => {
+      feedbackModal.style.display = "none";
+      thankYouMsg.style.display = "none";
+    }, 2000);
+  });
+
+  // Close modal when clicking outside
+  window.addEventListener("click", (e) => {
+    if (e.target === feedbackModal) {
+      feedbackModal.style.display = "none";
+    }
+  });
