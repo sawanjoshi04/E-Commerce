@@ -1,1 +1,1 @@
-# E-Commerce
+# UI design fir E-Commerce project
